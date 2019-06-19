@@ -1,5 +1,5 @@
 ---
-title: "Website"
+title: "Banjo's Website"
 output: html_document
 ---
 
@@ -7,22 +7,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+This is my dog Banjo!
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Check him out on [instagram](https://www.instagram.com/banjo_picks/)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Ok since it is <a href="https://twitter.com/hashtag/NationalPuppyDay?src=hash&amp;ref_src=twsrc%5Etfw">#NationalPuppyDay</a> I now have an excuse to share photos of my grown up puppy, Banjo 🐕! 😘 <a href="https://t.co/vy3YapMGQh">pic.twitter.com/vy3YapMGQh</a></p>&mdash; Jamie Afflerbach (@jafflerbach) <a href="https://twitter.com/jafflerbach/status/977257837222027265?ref_src=twsrc%5Etfw">March 23, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
