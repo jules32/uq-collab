@@ -1,0 +1,63 @@
+---
+title: "WHOI Live Demo!"
+author: "Julie Lowndes"
+date: "10/24/2018"
+---
+
+## Plan for our little analysis
+
+We will demo: 
+
+- data visualization with `ggplot2`
+- reproducible reports with RMarkdown
+- version control with Git and GitHub
+- publishing our report as a website!!!
+
+
+Data:
+
+We'll be using data from the National Park Service: Annual Visitation by Park from 1979-2017. <https://irma.nps.gov/Stats/Reports/National>.
+
+Our website url:
+
+We will publish this to <http://jules32.github.io/demo/whoi>.
+
+----
+
+## Setup information and code
+
+We'll clearly identify the requirements to do this analysis: R packages and data sources.
+
+```{r setup, warning=FALSE, message=FALSE}
+## load libraries
+library(tidyverse) # install.packages("tidyverse")
+
+## import data
+np_visit <- read_csv("https://raw.githubusercontent.com/allisonhorst/data-vis/master/np_visit.csv")
+```
+
+## Explore National Parks in California
+
+These data are already tidy, so we can subset the data we want to explore and visualize it.
+
+```{r ca national parks}
+## first filter National Parks in California
+np_california <- np_visit %>% # introduce pipe operator?
+  filter(type == "National Park" & state == "CA")
+
+## and now scatter plot
+ggplot(data = np_california, aes(x = year, y = visitors)) + 
+  geom_point(aes(color = park_name)) +
+  labs(title = "California National Park Visitation")
+
+## and now box plot
+ggplot(data = np_california, aes(x = park_name, y = visitors)) +
+  geom_boxplot(aes(fill = park_name)) +
+  coord_flip() +
+  theme(legend.position = "none")
+```
+
+## Let's add a photo
+
+![](Yosemite.jpg)
+
